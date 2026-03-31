@@ -1,15 +1,18 @@
+import { Link } from "react-router-dom";
+
 export default function Navbar() {
   return (
     <nav className="w-full px-8 py-5 bg-white border-b border-gray-100 flex justify-between items-center sticky top-0 z-50">
       
-      {/* Logo */}
-      <div className="text-xl font-bold tracking-wide cursor-pointer">
-        <span className="text-slate-600">The BeutyHub</span>
-      </div>
+      {/* 1. Logo - Wrapped in a Link so it goes back Home! */}
+      <Link to="/" className="text-xl font-bold tracking-wide cursor-pointer">
+        <span className="text-slate-600">The BeautyHub</span>
+      </Link>
 
       {/* Middle Links */}
       <div className="hidden md:flex space-x-8">
-        <a href="#" className="text-slate-500 hover:text-blue-600 transition-colors text-sm font-medium">Book Now</a>
+        {/* 2. HERE is your Book Now Link! */}
+        <Link to="/booking" className="text-slate-500 hover:text-blue-600 transition-colors text-sm font-medium">Book Now</Link>
         <a href="#" className="text-slate-500 hover:text-blue-600 transition-colors text-sm font-medium">Explore Styles</a>
         <a href="#" className="text-slate-500 hover:text-blue-600 transition-colors text-sm font-medium">Salons</a>
         <a href="#" className="text-slate-500 hover:text-blue-600 transition-colors text-sm font-medium">Shop</a>
