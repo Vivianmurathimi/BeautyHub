@@ -17,9 +17,9 @@ export default function Home() {
           <Link to="/booking" className="bg-[#111827] hover:bg-black text-white px-8 py-3 rounded-md font-medium transition-all shadow-sm flex items-center justify-center">
               Book Now
             </Link>
-          <button className="bg-white border border-blue-200 hover:border-blue-600 text-blue-600 px-8 py-3.5 rounded-full font-medium transition-all shadow-sm">
+          <Link to="/explore" className="bg-white border border-blue-200 hover:border-blue-600 text-blue-600 px-8 py-3.5 rounded-full font-medium transition-all shadow-sm">
             Explore Styles
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -48,7 +48,7 @@ export default function Home() {
           </Link>
 
         {/* Card 2: Style Explorer */}
-        <div className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group">
+        <Link to="/explore" className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group">
           <div className="h-64 w-full overflow-hidden bg-slate-100">
             <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80" alt="Styles" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
@@ -57,10 +57,10 @@ export default function Home() {
             <h3 className="text-2xl font-bold text-slate-900 mb-2">Style Explorer</h3>
             <p className="text-slate-500">Discover thousands of looks curated by expert stylists.</p>
           </div>
-        </div>
+        </Link>
 
         {/* Card 3: Salon Directory */}
-        <div className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group">
+        <Link to="/salons" className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group">
           <div className="h-64 w-full overflow-hidden bg-slate-100">
             <img src="https://media.istockphoto.com/id/1423513079/photo/luxury-hairdressing-and-beauty-salon-interior-with-chairs-mirrors-and-spotlights.jpg?s=612x612&w=0&k=20&c=T2cw6HblRzWPOlxPHsMcV9KRV8aLGOaLojvLe3Yoi_A=" alt="Salon Interior" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
@@ -69,10 +69,10 @@ export default function Home() {
             <h3 className="text-2xl font-bold text-slate-900 mb-2">Salon Directory</h3>
             <p className="text-slate-500">Explore salons near you and find your perfect vibe.</p>
           </div>
-        </div>
+        </Link>
 
         {/* Card 4: The Shop */}
-        <div className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group">
+        <Link to="/shop" className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group">
           <div className="h-64 w-full overflow-hidden bg-slate-100">
             <img src="https://blankabrand.com/cdn/shop/articles/Start_your_own_private_label_hair_care_brand_5df92c83-7f97-481c-9077-951b2f975972.jpg?v=1748026115&width=1100" alt="Products" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
@@ -81,7 +81,7 @@ export default function Home() {
             <h3 className="text-2xl font-bold text-slate-900 mb-2">The Shop</h3>
             <p className="text-slate-500">Premium products recommended by professionals.</p>
           </div>
-        </div>
+        </Link>
       </div>
     </main>
   );

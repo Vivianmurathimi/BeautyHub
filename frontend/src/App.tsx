@@ -1,26 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home.tsx";
-import Booking from "./pages/Booking.tsx";
+import Home from "./pages/Home";
+import Booking from "./pages/Booking";
+import Explore from "./pages/Explore.tsx"; // 1. Import the new page
 
 export default function App() {
   return (
     <BrowserRouter>
-      {/* The background and font settings wrap the whole app */}
       <div className="min-h-screen bg-[#f9f8f6] font-sans text-gray-900 selection:bg-gray-300">
-        
-        {/* The Navbar sits outside the Routes so it NEVER disappears */}
         <Navbar />
-
-        {/* The Traffic Cop decides which page goes here */}
         <Routes>
-          {/* If the URL is just the standard site, show Home */}
           <Route path="/" element={<Home />} />
-          
-          {/* If the URL has /booking, show the Booking page */}
           <Route path="/booking" element={<Booking />} />
+          <Route path="/explore" element={<Explore />} /> {/* 2. Add the route */}
         </Routes>
-        
       </div>
     </BrowserRouter>
   );
