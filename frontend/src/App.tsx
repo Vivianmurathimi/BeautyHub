@@ -3,8 +3,8 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Booking from "./pages/Booking";
 import Explore from "./pages/Explore";
-import Salons from "./pages/Salons.tsx"; 
-
+import Salons from "./pages/Salons";
+import Shop from "./pages/Shop"; 
 export default function App() {
   return (
     <BrowserRouter>
@@ -14,7 +14,8 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/explore" element={<Explore />} />
-          <Route path="/salons" element={<Salons />} /> 
+          <Route path="/salons" element={<Salons />} />
+          <Route path="/shop" element={<Shop />} /> 
         </Routes>
       </div>
     </BrowserRouter>
