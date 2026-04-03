@@ -2,7 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Booking from "./pages/Booking";
-import Explore from "./pages/Explore.tsx"; // 1. Import the new page
+import Explore from "./pages/Explore";
+import Salons from "./pages/Salons.tsx"; 
 
 export default function App() {
   return (
@@ -12,7 +13,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/booking" element={<Booking />} />
-          <Route path="/explore" element={<Explore />} /> {/* 2. Add the route */}
+          <Route path="/explore" element={<Explore />} />
+          <Route path="/salons" element={<Salons />} /> 
         </Routes>
       </div>
     </BrowserRouter>

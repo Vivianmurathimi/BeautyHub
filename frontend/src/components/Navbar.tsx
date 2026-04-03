@@ -13,9 +13,9 @@ export default function Navbar() {
       <div className="hidden md:flex space-x-8">
         {/* 2. HERE is your Book Now Link! */}
         <Link to="/booking" className="text-slate-500 hover:text-blue-600 transition-colors text-sm font-medium">Book Now</Link>
-        <a href="#" className="text-slate-500 hover:text-blue-600 transition-colors text-sm font-medium">Explore Styles</a>
-        <a href="#" className="text-slate-500 hover:text-blue-600 transition-colors text-sm font-medium">Salons</a>
-        <a href="#" className="text-slate-500 hover:text-blue-600 transition-colors text-sm font-medium">Shop</a>
+        <Link to="/explore" className="text-slate-500 hover:text-blue-600 transition-colors text-sm font-medium">Explore Styles</Link>
+        <Link to="/salons" className="text-slate-500 hover:text-blue-600 transition-colors text-sm font-medium">Salons</Link>
+        <Link to="/shop" className="text-slate-500 hover:text-blue-600 transition-colors text-sm font-medium">Shop</Link>
       </div>
 
       {/* Right Side: Icons + Auth Buttons */}
