@@ -5,6 +5,9 @@ import Booking from "./pages/Booking";
 import Explore from "./pages/Explore";
 import Salons from "./pages/Salons";
 import Shop from "./pages/Shop"; 
+import Auth from "./pages/Auth";
+
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -15,7 +18,8 @@ export default function App() {
           <Route path="/booking" element={<Booking />} />
           <Route path="/explore" element={<Explore />} />
           <Route path="/salons" element={<Salons />} />
-          <Route path="/shop" element={<Shop />} /> 
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/auth" element={<Auth />} />
         </Routes>
       </div>
     </BrowserRouter>

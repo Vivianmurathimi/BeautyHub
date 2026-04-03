@@ -79,7 +79,7 @@ export default function Shop() {
         
         {/* --- Header --- */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-medium mb-3">The Shop</h1>
+          <h1 className="text-4xl md:text-5xl font-medium mb-3">Shop</h1>
           <p className="text-gray-500 text-lg">Premium products recommended by professionals</p>
         </div>
 
