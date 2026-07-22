@@ -47,7 +47,7 @@ export default function Salons() {
         
         {/* --- Header --- */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-medium mb-3">SalonS</h1>
+          <h1 className="text-4xl md:text-5xl font-medium mb-3">Salons</h1>
           <p className="text-gray-500 text-lg">Find the perfect space with the expertise you deserve</p>
         </div>
 

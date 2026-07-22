@@ -11,7 +11,7 @@ export default function Navbar() {
 
       {/* Middle Links */}
       <div className="hidden md:flex space-x-8">
-        {/* 2. HERE is your Book Now Link! */}
+        <Link to="/" className="text-gray-500 hover:text-blue-600 transition-colors duration-200 font-medium">Home</Link>
         <Link to="/booking" className="text-slate-500 hover:text-blue-600 transition-colors text-sm font-medium">Book Now</Link>
         <Link to="/explore" className="text-slate-500 hover:text-blue-600 transition-colors text-sm font-medium">Explore Styles</Link>
         <Link to="/salons" className="text-slate-500 hover:text-blue-600 transition-colors text-sm font-medium">Salons</Link>
@@ -30,11 +30,15 @@ export default function Navbar() {
 
         <div className="h-5 w-px bg-gray-200 hidden md:block"></div>
 
-        {/* Log In & Register Buttons */}
-        <div className="hidden md:flex items-center space-x-3">
-          <button className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Log In</button>
-          <button className="bg-blue-600 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors shadow-md shadow-blue-600/20">Register</button>
-        </div>
+        {/* 3. The Login / Sign Up Buttons */}
+          <div className="flex space-x-4 items-center">
+            <Link to="/auth" className="hidden md:block text-gray-600 hover:text-black font-medium transition-colors duration-200">
+              Log In
+            </Link>
+            <Link to="/auth" className="bg-[#111827] hover:bg-black text-white px-6 py-2.5 rounded-md font-medium transition-all shadow-sm">
+              Sign Up
+            </Link>
+          </div>
       </div>
 
     </nav>

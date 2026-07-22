@@ -1,26 +1,48 @@
 import { Link } from 'react-router-dom';
+import heroImage from '../assets/homepage.jpg';
 
 export default function Home() {
   return (
     <main className="max-w-7xl mx-auto px-8 pt-20 pb-24">
         
-      {/* --- Top Hero Area --- */}
-      <div className="max-w-3xl mb-32">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">
-          Where inspiration meets <br className="hidden md:block" /> 
-          <span className="text-blue-600">expertise next to you</span>
-        </h1>
-        <p className="text-slate-500 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl">
-          The comprehensive platform for texture-inclusive hair care. Book appointments, discover styles, shop products, and join our community of professionals.
-        </p>
-        <div className="flex flex-wrap gap-4">
-          <Link to="/booking" className="bg-[#111827] hover:bg-black text-white px-8 py-3 rounded-md font-medium transition-all shadow-sm flex items-center justify-center">
+      {/* --- Top Hero Area (Now Side-by-Side) --- */}
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-12 mb-32">
+        
+        {/* Left Side: Text Content */}
+        <div className="lg:w-1/2 max-w-2xl">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">
+            Where inspiration meets <br className="hidden md:block" /> 
+            <span className="text-blue-600">expertise next to you</span>
+          </h1>
+          <p className="text-slate-500 text-lg md:text-xl mb-10 leading-relaxed">
+            The comprehensive platform for texture-inclusive hair care. Book appointments, discover styles, shop products, and join our community of professionals.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Link to="/booking" className="bg-[#111827] hover:bg-black text-white px-8 py-3.5 rounded-full font-medium transition-all shadow-sm flex items-center justify-center">
               Book Now
             </Link>
-          <Link to="/explore" className="bg-white border border-blue-200 hover:border-blue-600 text-blue-600 px-8 py-3.5 rounded-full font-medium transition-all shadow-sm">
-            Explore Styles
-          </Link>
+            <Link to="/explore" className="bg-white border border-blue-200 hover:border-blue-600 text-blue-600 px-8 py-3.5 rounded-full font-medium transition-all shadow-sm flex items-center justify-center">
+              Explore Styles
+            </Link>
+          </div>
         </div>
+
+        {/* Right Side: Featured Image */}
+        <div className="lg:w-1/2 w-full relative">
+          {/* Subtle blue accent box behind the image */}
+          <div className="absolute inset-0 bg-blue-50 rounded-[2.5rem] transform translate-x-4 translate-y-4 -z-10 hidden md:block"></div>
+          
+          {/* Main Image */}
+          <div className="aspect-[4/5] md:aspect-square lg:aspect-[4/5] w-full rounded-[2.5rem] overflow-hidden shadow-2xl">
+            {/* --- FIXED IMAGE SRC HERE --- */}
+            <img 
+              src={heroImage} 
+              alt="Beautiful woman with natural kinky hair" 
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+        </div>
+
       </div>
 
       {/* --- Section 1: The 4 Main Pillars --- */}
@@ -36,16 +58,16 @@ export default function Home() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-32">
         
         {/* Card 1: Direct Booking */}
-          <Link to="/booking" className="bg-[#fcfbf9] rounded-2xl overflow-hidden border border-gray-200 hover:shadow-md transition-shadow cursor-pointer group block">
-            <div className="h-64 w-full overflow-hidden bg-gray-200">
-              <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800" alt="Booking" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            </div>
-            <div className="p-8">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 mb-4 text-gray-600"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" /></svg>
-              <h3 className="text-xl font-medium mb-2">Direct Booking</h3>
-              <p className="text-gray-500">Book your appointment in seconds with top-rated stylists</p>
-            </div>
-          </Link>
+        <Link to="/booking" className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group block">
+          <div className="h-64 w-full overflow-hidden bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800" alt="Booking" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div className="p-8">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-8 h-8 mb-4 text-blue-500"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" /></svg>
+            <h3 className="text-2xl font-bold text-slate-900 mb-2">Direct Booking</h3>
+            <p className="text-slate-500">Book your appointment in seconds with top-rated stylists.</p>
+          </div>
+        </Link>
 
         {/* Card 2: Style Explorer */}
         <Link to="/explore" className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group">

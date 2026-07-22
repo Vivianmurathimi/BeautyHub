@@ -1,0 +1,35 @@
+// This tells Prisma how to generate the Javascript code we'll use in server.js
+generator client {
+  provider = "prisma-client-js"
+}
+
+// This tells Prisma to connect to Neon
+datasource db {
+  provider = "postgresql"
+}
+
+// --- THE DATABASE TABLES ---
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String   // We will encrypt this later!
+  name      String
+  role      String   @default("client") // "client" or "professional"
+  createdAt DateTime @default(now())
+
+  // A user can have many bookings
+  bookings  Booking[] 
+}
+
+model Booking {
+  id          String   @id @default(uuid())
+  date        DateTime
+  status      String   @default("pending") // pending, confirmed, cancelled
+  
+  // Connects this booking to a specific User
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  
+  createdAt   DateTime @default(now())
+}
